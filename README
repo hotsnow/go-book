@@ -12,3 +12,28 @@ It is written in reStructuredText and the rendering is done with Sphinx.
 Your feedback is really appreciated :)
 
 -Yuuta
+
+
+欢迎来到 GO 
+**********************
+
+这些小工作（还在进行中）都是为了一本在线学习 Go 语言编程的书籍(golang) -
+就是说为了所有对 Go 感兴趣的人， 那些希望简单快乐地去阅读的人。 -- 尽管我的英语并不那么好。
+
+你可以在线阅读本书：http://go-book.appsport.com
+
+这本书是用 reStructuredText 编写，使用 Sphinx 生成。
+
+非常感谢您的反馈 :)
+
+-Yuuta
+
+
+译者注
+**********************
+
+翻译这本书没有得到任何授权！翻译纯属个人爱好！
+限于本人英语水非常有限（不是谦虚），本人不对任何翻译错误负责。
+但欢迎所有的批评指正，感谢！
+
+- hotsnow
