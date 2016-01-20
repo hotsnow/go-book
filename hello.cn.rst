@@ -6,7 +6,7 @@ Konnichiwa, World!
 如果你连翅膀是什么都不知道的时候你是不可能建一架飞机的！
 因此在这章节中我们会从一些最简单基础的语法开始试试水。
 
-The program
+程序
 ===========
 按照惯例。我们也推崇一些惯例[#f1]_.
 一个人学习编程语言后写的第一个程序就是简单的打印出一句：``Hello World``。
@@ -33,7 +33,7 @@ Output:
 细节
 ===========
 
-包的感念
+包的概念
 ----------------------
 Go 程序师由"包"构成的，这些包也可能引用其他的包。
 A Go program is constructed as a "package", which may in turn use facilities
