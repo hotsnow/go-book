@@ -16,8 +16,8 @@
    maps
    more-functions
    even-more-functions
-   methods
+   方法
    more-methods
-   interfaces
+   接口
    more-interfaces
    colophon
