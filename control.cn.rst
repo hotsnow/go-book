@@ -34,12 +34,12 @@ Go 的注释方法和 C++  是一样的:
 
 这会让代码看起来清晰很多，也更容易阅读。
 
-唯一你能看到分号的地方就是在循环逻辑中的分句中，他们不是在所有的声明中都需要的。
+唯一你能看到分号的地方就是在循环逻辑中的分句中，他们不是在所有的声语句都需要的。
 
-注意，你可以在同一行中使用分号来分隔不同的声明语句。
+注意，你可以在同一行中使用分号来分隔不同的语句。
 
 有一个会让你感到惊讶的是，
-和if 一样在一个和 if 声明一样的结构中放置一个左大括号在同一 行是非常重要的。
+和if 一样在一个和 if 语句一样的结构中放置一个左大括号在同一 行是非常重要的。
 如果你不这么做的话，就可能编译失败或者得到错误的结果 [#f1]
 The one surprise is that it's important to put the opening brace of a construct
 such as an if statement on the same line as the if; if you don't, there are
@@ -47,9 +47,9 @@ situations that may not compile or may give the wrong result [#f1]_
 
 好了，我们现在开始了。
 
-if 声明
+if 语句
 ================
-也许这是在命令式编程中大家最熟悉的类型声明了。它可以被概括为：
+也许这是在命令式编程中大家最熟悉的语句类型了。它可以被概括为：
  if 条件，do 做什么，else 做什么
 Perhaps the most well-known statement type in imperative programming. And it can
 be summarized like this: if condition met, do this, else do that.
@@ -77,7 +77,7 @@ be summarized like this: if condition met, do this, else do that.
         fmt.Println("x is less than 10")
     }
 
-你也可以联合使用多个if/else 声明。
+你也可以联合使用多个if/else 语句。
 
 .. code-block:: go
     :linenos:
@@ -90,9 +90,9 @@ be summarized like this: if condition met, do this, else do that.
         fmt.Println("The integer is greater than 3")
     }
 
-for 声明
+for 语句
 =================
-``for``声明是用于迭代和循环。 它的大致语法如下：
+``for``语句是用于迭代和循环。 它的大致语法如下：
 
 .. code-block:: go
     :linenos:
@@ -144,7 +144,7 @@ for 声明
 实际上``expression1``, ``expression2``, 和 ``expression3``都是可选的。
 这就是说在``for``循环里你可以忽略一个、两个或者全部都忽略掉。
 如果你忽略表达式``expression1``或者``expression3``，就代表循环不会执行。
-如果你忽略表达式``expression2``就代表条件一直为真，循环会一直执行下去永不结束 -- 除非遇到``break``声明。
+如果你忽略表达式``expression2``就代表条件一直为真，循环会一直执行下去永不结束 -- 除非遇到``break``语句。
 
 因为表达式是可以忽略的，因此你可以像下面这些例子一样写代码：
 
@@ -210,14 +210,14 @@ for 声明
 这个程序将会打印除了5之外从10到1的所有数字，因为在第三行里面，条件``if index == 5``为真，
 因此``continue``将会被执行, ``fmt.Println(index) (for index == 5)`` 将不会被执行。
 
-switch 声明
+switch语句 
 ====================
 有时候，你需要写些复杂的``if``/``else``测试。你的代码将变得很难看，并且难以阅读和维护。
-``switch``声明能使它变得更好并且很容易的去阅读。
+``switch``语句能使它变得更好并且很容易的去阅读。
 
 Go 的 switch 比 C 中的更加松散，因为 case 表达式步需要是常量甚至也步需要是整形。
 
-switch 声明的大致形式如下：
+switch 语句的大致形式如下：
 
 .. code-block:: go
     :linenos:
@@ -239,18 +239,18 @@ switch 声明的大致形式如下：
 
 当然，你可以使用 case 的数量是不限的。
 
-可以使用多个匹配表达式，每个都在 case 声明中使用逗号分开。
+可以使用多个匹配表达式，每个都在 case 语句中使用逗号分开。
 
 如果不存在``sExpr``表达式，那么默认就是*布尔*类型，case 条件也应该是*布尔*类型。
 
-如果超过一个 case 声明被匹配，那么字面上的第一个将会被执行。
+如果超过一个 case 语句被匹配，那么字面上的第一个将会被执行。
 If more than one case statements match, then the first in lexical order is
 executed.
 
 *default*这个 case 条件是可选的，并且可以放在 switch 块的任何地方，而不是只能放最后。
 
  和其他的一些编程语言不一样，每隔一个 case 快都是独立的，代码不会*落空*（每一个 case 代码块都
-像独立的 if-else-if 代码块一样。 如果你希望落空的匹配，你可以使用 fallthrough 声明来明确地 指定。
+像独立的 if-else-if 代码块一样。 如果你希望落空的匹配，你可以使用 fallthrough 语句来明确地 指定。
 Unlike certain other languages, each case block is independent and code does not
 "fall through" (each of the case code blocks are like independent if-else-if
 code blocks. There is a fallthrough statement that you can explicitly use to
@@ -276,9 +276,9 @@ obtain fall through behavior if desired.)
     }
 
  在这个片段中，我们初始化``index``为10，但实际上，你应该把``index``看成是一个计算型的值（
-switch 声明前的某种计算或者是函数返回值）
+switch 语句前的某种计算或者是函数返回值）
 
- 注意在第6行中，我们把一些表达式（2，3，4）组合成一个单独的 case 声明。
+ 注意在第6行中，我们把一些表达式（2，3，4）组合成一个单独的 case 语句。
 
 .. code-block:: go
     :linenos:
